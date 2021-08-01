@@ -5,5 +5,5 @@ Rapid SARS‑CoV‑2 genome characterisation for outbreak tracking
 
 CalmBelt's [demo](https://calmbelt.mtms.dev)
 
-Contact: suphavilaic[at]gis.a-star.edu.sg and hatairat.y[at]cmu.ac.th
+Contact: suphavilaic@gis.a-star.edu.sg and hatairat.y@cmu.ac.th
 
