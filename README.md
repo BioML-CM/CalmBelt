@@ -8,7 +8,7 @@ CalmBelt's [demo](https://calmbelt.mtms.dev)
 Contact: suphavilaic@gis.a-star.edu.sg and hatairat.y@cmu.ac.th
 
 
-# preparation
+## preparation
 ### 1. install anaconda and create environment <br>
 - wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh <br>
 - bash Miniconda3-latest-Linux-x86_64.sh <br>
@@ -32,12 +32,12 @@ Contact: suphavilaic@gis.a-star.edu.sg and hatairat.y@cmu.ac.th
 - pip install -r requirement.txt <br>
 - conda install -c plotly plotly-orca <br>
 
-# preprocessing
+## preprocessing
 - download folder `calmbelt` <br>
 - create genome_dir folder in calmbelt folder that contain fasta file and genome_metadata(tsv)  <br>
 - python preprecess.py genome_dir genome_metadata reference_fname preprocess_dir [predefined_clade] [predefined_label] [subsampling_n_samples]
 
-# run app
+## run app
 - python covid_app.py preprocess_dir port[8050] <br>
 - localthost:8050
 
