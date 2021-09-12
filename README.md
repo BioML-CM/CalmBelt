@@ -31,3 +31,13 @@ Contact: suphavilaic@gis.a-star.edu.sg and hatairat.y@cmu.ac.th
 - cd .. <br>
 - pip install -r requirement.txt <br>
 - conda install -c plotly plotly-orca <br>
+
+# preprocessing
+- download folder `calmbelt` <br>
+- create genome_dir folder in calmbelt folder that contain fasta file and genome_metadata(tsv)  <br>
+- python preprecess.py genome_dir genome_metadata reference_fname preprocess_dir [predefined_clade] [predefined_label] [subsampling_n_samples]
+
+# run app
+- python covid_app.py preprocess_dir port[8050] <br>
+- localthost:8050
+
