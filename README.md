@@ -9,28 +9,25 @@ Contact: suphavilaic@gis.a-star.edu.sg and hatairat.y@cmu.ac.th
 
 
 # preparation
-1. install anaconda and create environment
-wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh \n
-bash Miniconda3-latest-Linux-x86_64.sh
-conda create -n covid python=3.7
+### 1. install anaconda and create environment <br>
+- wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh <br>
+- bash Miniconda3-latest-Linux-x86_64.sh <br>
+- conda create -n covid python=3.7 <br>
 
-2. install blastn
-sudo apt-get update
-sudo apt-get install ncbi-blast+
+### 2. install blastn <br>
+- sudo apt-get update <br>
+- sudo apt-get install ncbi-blast+ <br>
 
-3. install iqtree
-`iqtree2` precompiled binary can be downloaded from https://github.com/iqtree/iqtree2/releases/tag/v2.1.2
+### 3. install iqtree <br>
+- `iqtree2` precompiled binary can be downloaded from https://github.com/iqtree/iqtree2/releases/tag/v2.1.2 <br>
 
-4. install mafft, pango and requirement package
-conda activate covid
-conda install mafft
-
-git clone https://github.com/cov-lineages/pangolin.git
-conda env update -n covid --file pangolin/environment.yml
-cd pangolin
-pip install .
-cd ..
-pip install -r requirement.txt
-conda install -c plotly plotly-orca
-pip install gunicorn
-pip install notebook
+### 4. install mafft, pango and requirement package <br>
+- conda activate covid <br>
+- conda install mafft <br>
+- git clone https://github.com/cov-lineages/pangolin.git <br>
+- conda env update -n covid --file pangolin/environment.yml <br>
+- cd pangolin <br>
+- pip install . <br>
+- cd .. <br>
+- pip install -r requirement.txt <br>
+- conda install -c plotly plotly-orca <br>
