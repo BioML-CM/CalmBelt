@@ -10,7 +10,7 @@ Contact: suphavilaic@gis.a-star.edu.sg and hatairat.y@cmu.ac.th
 
 # preparation
 1. install anaconda and create environment
-wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh \n
 bash Miniconda3-latest-Linux-x86_64.sh
 conda create -n covid python=3.7
 
