@@ -29,7 +29,7 @@ cd pangolin
 pip install .
 cd .. 
 pip install -r requirement.txt 
-conda install -c plotly plotly-orca
+conda install -c plotly python-kaleido
 sudo apt-get install ghostscript
 ```
 
