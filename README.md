@@ -47,7 +47,7 @@ python preprocess.py genome_dir reference.fasta gene.tsv clade.tsv name_by_who.t
 ```
 
 ### 4. Starting CalmBelt web application
-Users can download preprocess.zip for run app ??
+Users can download calmbelt/preprocess.zip for run app ??
 
 ```bash
 python covid_app.py preprocess 
