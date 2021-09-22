@@ -37,6 +37,7 @@ Toytree will require `gs`, so you might need to install ghostscript as well `sud
 This step would require users to prepare input files as follow:
 - `genome_dir` contain fasta files
 - `genome_metadata.tsv` contains region, clade, and lineage information
+- `world_metadata.tsv` ....??
 ```bash
 python preprecess.py genome_dir reference_fname reference_gene_loci predefined_clade predefined_label preprocess_dir world_metadata_fname country_name subsampling_n_samples
 ```
@@ -46,6 +47,8 @@ python preprocess.py genome_dir reference.fasta gene.tsv clade.tsv name_by_who.t
 ```
 
 ### 4. Starting CalmBelt web application
+Users can download preprocess.zip for run app 
+
 ```bash
 python covid_app.py preprocess 
 ```
