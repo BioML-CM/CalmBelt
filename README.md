@@ -30,6 +30,7 @@ pip install .
 cd .. 
 pip install -r requirement.txt 
 conda install -c plotly plotly-orca
+sudo apt-get install ghostscript
 ```
 
 ### 3. Preprocessing your input genome set
