@@ -30,8 +30,8 @@ pip install .
 cd .. 
 pip install -r requirement.txt 
 conda install -c plotly python-kaleido
-sudo apt-get install ghostscript
 ```
+Toytree will require `gs`, so you might need to install ghostscript as well `sudo apt-get install ghostscript`.
 
 ### 3. Preprocessing your input genome set
 This step would require users to prepare input files as follow:
@@ -40,14 +40,14 @@ This step would require users to prepare input files as follow:
 ```bash
 python preprecess.py genome_dir reference_fname reference_gene_loci predefined_clade predefined_label preprocess_dir world_metadata_fname country_name subsampling_n_samples
 ```
-For example (an example dataset can be downloaded here),
+For example (an example dataset is avilable per requrest),
 ```bash
 python preprocess.py genome_dir reference.fasta gene.tsv clade.tsv name_by_who.tsv preprocess world_metadata.tsv Singapore -1
 ```
 
 ### 4. Starting CalmBelt web application
 ```bash
-python scripts/covid_app.py preprocess_dir 
+python covid_app.py preprocess 
 ```
 CalmBelt is based on Dash/Flask framework (default port = 8050), and users can access the website at http://localthost:8050. Additional information for deploying CalmBelt on a remote server is avilable per request.
 
