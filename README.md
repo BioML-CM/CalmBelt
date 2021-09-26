@@ -52,5 +52,5 @@ Users can download calmbelt/preprocess.zip for run app ??
 ```bash
 python covid_app.py preprocess 
 ```
-CalmBelt is based on Dash/Flask framework (default port = 8050), and users can access the website at http://localthost:8050. Additional information for deploying CalmBelt on a remote server is avilable per request.
+CalmBelt is based on Dash/Flask framework (default port = 8050), and users can access the website at http://localthost:8050. Additional information for deploying CalmBelt on a remote server is avilable upon request.
 
