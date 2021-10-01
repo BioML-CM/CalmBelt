@@ -336,4 +336,38 @@ def built_iqtree(group_dict, path):
 
 # -------------------------------------------------------
 
+def built_timetree(group_dict, path):
+
+    aln_fname = os.path.join(path, "concat.mafft")
+    tree_fname = os.path.join(path, "concat.mafft.treefile")
+    new_newick_fname = os.path.join(path, "concat.mafft.timetree.nwk")
+
+    sample_date_dict = {}
+    with open(aln_fname) as handle:
+        for record in SeqIO.parse(handle, "fasta"):
+            if record.id == 'Reference':
+                sy = int(date(2019, 12, 30).strftime("%Y"))
+                sd = (float(date(2019, 12, 30).strftime("%j")) - 1) / 365
+                sdate = sy + sd
+            else:
+                sid, sdate, group = record.id.split('_')
+                d, m, y = sdate.split('-')
+                sy = int(date(int(y), int(m), int(d)).strftime("%Y"))
+                sd = (float(date(int(y), int(m), int(d)).strftime("%j")) - 1) / 365
+                sdate = sy + sd
+
+            sample_date_dict[record.id] = sdate
+
+    tt = TreeTime(tree=tree_fname, aln=aln_fname, dates=sample_date_dict)
+    tt.run(root='best')
+
+    Phylo.write(tt.tree, new_newick_fname, "newick")
+
+    rtre = toytree.tree(new_newick_fname, tree_format=1)
+
+    colorlist = [group_dict[i.split('_')[-1]] for i in rtre.get_tip_labels()]
+    canvas, axes, mark = rtre.draw(tip_labels_colors=colorlist, scalebar=True)
+
+    # save png
+    toyplot.png.render(canvas, f'{os.path.join(path, "timetree.png")}', scale=3)
 
