@@ -23,11 +23,17 @@ A precompiled binary for `iqtree2` can be downloaded from https://github.com/iqt
 conda activate covid 
 conda install -c bioconda blast
 conda install mafft 
+
 git clone https://github.com/cov-lineages/pangolin.git 
 conda env update -n covid --file pangolin/environment.yml 
 cd pangolin 
 pip install .
 cd .. 
+
+git clone https://github.com/neherlab/treetime.git
+pip install .
+cd ..
+
 pip install -r requirement.txt 
 conda install -c plotly python-kaleido
 ```
@@ -37,17 +43,16 @@ Toytree will require `gs`, so you might need to install ghostscript as well `sud
 This step would require users to prepare input files as follow:
 - `genome_dir` contain fasta files
 - `genome_metadata.tsv` contains region, clade, and lineage information
-- `world_metadata.tsv` ....??
+- `world_metadata.tsv` contains continent, clade, and lineage information of samples around the world (can be obtained from GISAID).
 ```bash
 python preprecess.py genome_dir reference_fname reference_gene_loci predefined_clade predefined_label preprocess_dir world_metadata_fname country_name subsampling_n_samples
 ```
-For example (an example dataset is avilable per requrest),
+For example (an example dataset is available at `calmbelt/preprocess.zip`),
 ```bash
 python preprocess.py genome_dir reference.fasta gene.tsv clade.tsv name_by_who.tsv preprocess world_metadata.tsv Singapore -1
 ```
 
 ### 4. Starting CalmBelt web application
-Users can download calmbelt/preprocess.zip for run app ??
 
 ```bash
 python covid_app.py preprocess 
