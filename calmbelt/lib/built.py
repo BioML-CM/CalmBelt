@@ -359,7 +359,7 @@ def built_timetree(group_dict, path):
             sample_date_dict[record.id] = sdate
 
     tt = TreeTime(tree=tree_fname, aln=aln_fname, dates=sample_date_dict)
-    tt.run(root='best')
+    tt.run(root='Reference')
 
     Phylo.write(tt.tree, new_newick_fname, "newick")
 
