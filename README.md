@@ -3,7 +3,7 @@ Rapid SARS‑CoV‑2 genome characterisation for outbreak tracking
 
 ![2021-05 COVID figures](https://user-images.githubusercontent.com/76929527/127766996-cdd82bb1-4e2c-49cd-b413-822ecf254eb5.png)
 
-CalmBelt's [demo](https://calmbelt.mtms.dev)
+CalmBelt's [demo](https://calmbelt-demo.mtms.dev)
 
 Contact: suphavilaic@gis.a-star.edu.sg and hatairat.y@cmu.ac.th
 
@@ -31,6 +31,7 @@ pip install .
 cd .. 
 
 git clone https://github.com/neherlab/treetime.git
+cd treetime
 pip install .
 cd ..
 
