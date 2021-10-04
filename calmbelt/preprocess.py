@@ -15,7 +15,7 @@ parser.add_argument("preprocess_dir", help="Output directory for preprocessed da
 parser.add_argument("world_metadata_fname", help="A metadata for samples around the world (only be used for "
                                                  "illustrating overall trends)")
 parser.add_argument("country_name", help="A country name for country-specific stats, e.g. Singapore")
-parser.add_argument("subsampling_n_samples", nargs='?', default=-1, help=">= 500; Default = -1, i.e. all samples")
+parser.add_argument("subsampling_n_samples", nargs='?', type=int, default=-1, help=">= 500; Default = -1, i.e. all samples")
 
 args = parser.parse_args()
 print(args)
