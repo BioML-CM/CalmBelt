@@ -318,7 +318,7 @@ def built_iqtree(group_dict, path):
         SeqIO.write(record_list, output_handle, "fasta")
 
     command_mafft_list = ['mafft', '--retree', '2', f'{os.path.join(path, "concat.fasta")}', '>',
-                          f'{os.path.join(path, "concat.mafft")}']
+                          f'{os.path.join(path, "concat.mafft")}', '2>', f'{os.path.join(path, "mafft.log")}']
     mafft_output = subprocess.check_output(' '.join(command_mafft_list), shell=True)
 
     command_iqtree_list = ['iqtree2', '-s', f'{os.path.join(path, "concat.mafft")}', '-m', 'GTR+G']
