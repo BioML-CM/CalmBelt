@@ -5,8 +5,9 @@ Rapid SARS‑CoV‑2 genome characterisation for outbreak tracking
 
 CalmBelt's [demo](https://calmbelt-demo.mtms.dev)
 
-Contact: suphavilaic@gis.a-star.edu.sg and hatairat.y@cmu.ac.th
+Citation: Yingtaweesittikul, Hatairat, Karrie Ko, Nurdyana Abdul Rahman, Shireen Yan Ling Tan, Niranjan Nagarajan, and Chayaporn Suphavilai. "[CalmBelt: rapid SARS-CoV-2 genome characterisation for outbreak tracking.](https://www.frontiersin.org/articles/10.3389/fmed.2021.790662/full)" Frontiers in Medicine: 2600. 
 
+Contact: suphavilaic@gis.a-star.edu.sg and hatairat.y@cmu.ac.th
 
 ## How to run CalmBelt
 ### 1. Create conda environment
